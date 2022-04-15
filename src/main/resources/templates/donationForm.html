@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+     <title>Donation Form</title>
+    <link rel="stylesheet" th:href="@{/css/donation.css}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+</head>
+
+<body>
+    <section>
+        <div class="form-container">
+            <h1>Donate Us </h1>
+            <form action="#" th:action="@{/savedonations}" th:object="${donationbind}" >
+                <div class="control">
+                    <label for="name">Full Name:</label>
+                    <input type="text" th:field="*{fullname}" placeholder="Enter Your Full Name" required>
+
+                </div>
+                <div class="control">
+                    <label for="psw">Location</label>
+                    <input type="text" th:field="*{location}" placeholder="Enter Your Location" required>
+
+
+                </div>
+                <div class="control">
+                    <label for="psw">Mobile</label>
+                    <input type="number" th:field="*{mobile}" placeholder="Enter Your Mobile Number" required>
+
+
+                </div>
+                <div class="control">
+                    <label for="psw">Amount</label>
+                    <input type="number" th:field="*{amount}" placeholder="Enter The Amount you wanted to Donate" min="1" required>
+
+
+                </div>
+                <div class="control">
+                   <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                <br>
+                <div class="control">
+                  <a th:href="@{/}"  class="btn btn-primary">Home Page</a>
+                </div>
+                 
+            </form>
+        </div>
+    </section>
+</body>
+</html>

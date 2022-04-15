@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+</html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1" />
+  <title>User Registeration</title>
+  <link rel="stylesheet" th:href="@{/css/registerUser.css}" />
+
+  <script type="text/javascript" th:src="@{/js/actions.js}"></script>
+
+  <script type="text/javascript">
+    function checkPassword() {
+      var str = document.getElementById("pass").value;
+      // at least one number, one lowercase and one uppercase letter
+      // at least six characters
+      var re = /(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,}/;
+      return re.test(str);
+    }
+  </script>
+</head>
+
+<body>
+  <section>
+    <center>
+      <h1>User Registration Form</h1>
+    </center>
+    <form action="#" th:action="@{/saveuser}" th:object="${users}" method="post" class="form-container">
+      <div class="stack">
+        <div>
+          <label>Full Name :</label><br>
+          <input type="text" th:field="*{username}" placeholder="Enter Your Name here" class="input" required
+            id="username" name="username" value="" />
+        </div>
+
+        <div>
+          <label>Age :</label><br>
+          <input type="number" th:field="*{age}" placeholder="Enter Your Age" class="input" required id="age" name="age"
+            value="0" />
+        </div>
+
+        <div>
+          <label>Blood Group :</label><br>
+          <input type="text" th:field="*{blood_group}" placeholder="Enter Your Blood Group" class="input" required
+            id="blood_group" name="blood_group" value="" />
+        </div>
+
+        <div>
+          <label>Email :</label><br>
+          <input type="email" th:field="*{email}" placeholder="Enter Your Email-Id" class="input" required id="email"
+            name="email" value="" />
+        </div>
+
+        <div>
+          <label>Set Password :</label><br>
+          <input type="password" id="pass" th:field="*{password}" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            placeholder="Set Your Password" class="input"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            required name="password" value="" />
+        </div>
+
+        <div>
+          <label>Location :</label><br>
+          <input type="text" th:field="*{location}" placeholder="Enter Your Location" class="input" required
+            id="location" name="location" value="" />
+        </div>
+
+        <div>
+          <label>Mobile Number :</label><br>
+          <input type="text" th:field="*{mobile}" placeholder="Enter Mobile Number" class="input" required id="mobile"
+            name="mobile" value="" />
+        </div>
+
+        <div>
+          <label>Gender :</label>
+          <select th:field="*{gender}" id="gender" name="gender">
+            <option th:value="'Male'" th:text="Male"></option>
+            <option th:value="'Female'" th:text="Female"></option>
+          </select>
+        </div>
+
+        <div>
+          <label>Want to donate blood :</label>
+
+          <input class="radio" type="radio" th:field="*{available}" id="option1" th:value="Yes" />
+          <label class="radio-label" for="option1">Yes</label>
+
+          <input class="radio" type="radio" th:field="*{available}" id="option2" th:value="No" />
+          <label class="radio-label" for="option2">No</label>
+        </div>
+
+        <div>
+          <button type="submit" class="btn" style="vertical-align:middle">
+            <span>Register User</span>
+          </button>
+        </div>
+
+        <p>
+          Instruction while Updating Details :<sup style="color: red">*</sup>Email ID Cannot Be Changed Once Entered
+        </p>
+      </div>
+    </form>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/searchByBloodGroupList.css}">
+<title>Search Donor</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+
+<form action="#" th:action="@{/searching}" th:object="${bloodgrp}" method="get" >
+<h3>Search By Blood Group</h3>
+<input class="form-control mr-sm-2" type="search" name="blood_group"  placeholder="ENTER THE BLOOD GROUP TO SEARCH" aria-label="Search" style="width: 500px;">
+<br>
+ <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+<form action="#" th:action="@{/searching1}" th:object="${locate}" method="get" >
+<h3>Search By Location</h3>
+<input class="form-control mr-sm-2" type="search" name="location"  placeholder="ENTER THE LOCATION TO SEARCH" aria-label="Search" style="width: 500px;">
+<br>
+ <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+
+</form>
+</body>
+</html>

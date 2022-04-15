@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Reset Password</title>
+<link rel="stylesheet" th:href="@{/css/searchByBloodGroupList.css}">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+<script>
+	function validateForm() {
+		
+		var newPswd = document.getElementById("in1").value;
+		var cPswd = document.getElementById("in2").value;
+		
+		if(newPswd === cPswd) {
+			return true;
+		}
+		else {
+			document.getElementById("s2").innerHTML = "Password not matching";
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+
+ <form class="frm" action="#" th:action="@{/generatenewpswd}" th:object="${newpswddetails}" onsubmit="return validateForm()">
+ 
+ 				<div class="control">
+                    <label class="lbl" for="name">Email ID :</label>
+                    <input type="text" th:field="*{email}" name="name"  required>
+                </div>
+                <div class="control">
+                    <label class="lbl" for="new_pswd">Enter new password :</label>
+                    <input type="text" id="in1" th:field="*{password}" name="pswd"  required><span id="s1"></span>
+                </div>
+                <div class="control">
+                    <label class="lbl" for="c_pswd">Confirm password</label>
+                    <input type="text" id="in2" name="cpswd" required>&ensp;<span class="lbl" id="s2"></span>
+                </div>
+                <div class="control">
+                    <input type="submit" class="btn btn-success my-2 my-sm-0" value="Submit">
+                </div>
+                 <div class="control1">
+                    <a th:href="@{/userlogin}" >Go back to Login</a>
+                </div>
+    
+ </form>
+</body>
+</html>

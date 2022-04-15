@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/userforgot.css}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="form-container">
+            <h1>Forgot Password </h1>
+            <form action="#" th:action="@{/userforgotpasscheck}" th:object="${forgotdetails}" >
+                <div class="control">
+                    <label for="name">Email ID :</label>
+                    <input type="text" th:field="*{email}" name="name"  required>
+
+                </div>
+                <div class="control">
+                    <label for="psw">Enter last 4 digits of mobile number</label>
+                    <input type="text" th:field="*{mobile}"  name="psw" required maxlength="4">
+
+
+                </div>
+                <div class="control">
+                    <input type="submit" value="Submit">
+                </div>
+                 <div class="control1">
+                    <a th:href="@{/userlogin}" >Go back to Login</a>
+                </div>
+    
+            </form>
+        </div>
+    </section>
+</body>

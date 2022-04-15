@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Donate Blood</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" th:href="@{/css/homepage.css}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+       <header>
+           <div class="container-fluid">
+               <div class="row">
+                   <div class="col"style="height: 40px;
+                   background-color: black;" >
+<!--                             <div class="telldiv"> -->
+<!--                                 <a href="tel:+919966551248" style="color: rgb(100, 100, 98);" class="atel" >Call Us : <span>+91-9966-55-248</span></a> -->
+<!--                                 <img src="images/mail-logo.webp" class="imail"> -->
+<!--                                 <a href="mailto:bloodcamp24@gmail.com"  class="amail" ><i></i><span>bloodcamp24@gmail.com</span></a> -->
+<!--                             </div> -->
+                         
+                    </div>
+                </div>
+
+
+                <nav>
+                  <input type="checkbox" id="check">
+                  <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                  </label>
+                  <label class="logo" style="font-size: 60px;">Donate<span style="color: red;">Blood</span></label>
+                  <ul>
+                    <li><a  th:href="@{/}">Home</a></li>
+                    <li><a  th:href="@{/aboutus}">About Us</a></li>
+                    <li><a th:href="@{/userlogin}">Login</a></li>
+                    <li><a th:href= "@{/adminlogin}">Admin</a></li>
+                    <li><a  th:href= "@{/donateus}">Donate Us</a></li>
+                    <li><a th:href="@{/donationlist}">Donation List</a></li>
+                  </ul>
+                </nav>
+
+
+
+
+
+
+
+
+
+               
+               
+
+           </header>
+
+
+<!--            Header Close style="margin-top: -20px;" -->
+
+           <div class="container-fluid" >
+            
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+          
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+          
+                <div class="item active">
+                  <img th:src="@{images/slide-02.jpg}" alt="Los Angeles" style="width:100%;">
+                  <div class="carousel-caption">
+                    <h2>Donate Blood</h2>
+                    <p>Save Life</p>
+                  </div>
+                </div>
+          
+                <div class="item">
+                  <img th:src="@{images/slider-2.jpg}" alt="Chicago" style="width:100%;">
+                  <div class="carousel-caption">
+                    <h2>Donate Blood</h2>
+                    <p>Save Life</p>
+                   
+                  </div>
+                </div>
+              
+                <div class="item">
+                  <img th:src="@{images/slider-3.jpg}" alt="New York" style="width:100%;">
+                  <div class="carousel-caption">
+                    <h2>Donate Blood</h2>
+                    <p>Save Life</p>
+                   
+                  </div>
+                </div>
+                <div class="item active">
+                  <img th:src="@{/images/img_2.jpg}" alt="Los Angeles" style="width:100%;">
+                  <div class="carousel-caption">
+                    <h2>Donate Blood</h2>
+                    <p>Save Life</p>
+                  </div>
+                </div>
+            
+              </div>
+          
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+   
+           
+<div class="container-fluid">
+    
+        <div>
+            <h2 style="text-align: center;background-color: red;font-size: 60px;line-height: 70px;"> Benefits </h2>
+        </div>
+            <div class="panel-body justify" >
+            <li style="font-size: 30px;">Donating blood may reduce the risk of heart disease for men and stimulate the generation of red blood cells.</li>
+            <li style="font-size: 30px;">The amount of toxic chemicals (e.g. mercury, pesticides, fire retardants) circulating in the blood stream is reduced by the amount contained in given blood. </li>
+            <li style="font-size: 30px;">The good news is you can give blood again and again to help save more lives! </li>
+            <li style="font-size: 30px;">If you're a regular blood donor, you can give blood once in 12 weeks.</li>
+           </div>
+    
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col">
+            <img src="images/about.jpg" style="height: 300px; width: 360px;border-radius: 5px;border: 2px solid red;margin-left: 40px;">
+            <img src="images/download.png" style="height: 300px; width: 360px; border-radius: 5px;border: 2px solid red;">
+            <img src="images/unnamed.jpg" style="height: 300px; width: 360px; border-radius: 5px;border: 2px solid red;">
+
+
+        </div>
+        
+
+    </div>
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="counter-item text-center mb-5 mb-lg-0">
+        <h3 class="mb-0" ><span class="counter-stat font-weight-bold" style="color: black;">5</span>cr</h3>
+        <p class="text-muted" style="color: black;">India need 5 Crore Units on a annual basis for various purposes. </p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="counter-item text-center mb-5 mb-lg-0">
+        <h3 class="mb-0"><span class="counter-stat font-weight-bold" style="color: black;">50 </span>% </h3>
+        <p class="text-muted" style="color: black;">Only 50% of blood requirement is met. Our aims to reduce the pressure of banking blood and save billions.</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="counter-item text-center mb-5 mb-lg-0">
+        <h3 class="mb-0"><span class="counter-stat font-weight-bold" style="color: black;">38</span>k</h3>
+        <p class="text-muted" style="color: black;">India needs 38,000 units daily.Our projects is to reach 1 Million live blood donors in 24 months.</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="counter-item text-center">
+        <h3 class="mb-0"><span class="counter-stat font-weight-bold" style="color: black;">7</span>%</h3>
+        <p class="text-muted"style="color: black;" >Annual increase in blood requirement for various medical requirements.</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<!-- Section Intro END -->
+<!-- Section About Start -->
+
+
+
+<!-- Section About End -->
+<!-- section Counter Start -->
+
+<!-- section Counter End  -->
+
+<div class="container">
+	<div class="row">
+		<div class="col-xl-12" style="background: crimson;">
+			<h2 style="font-weight: 500;text-align: center;color: whitesmoke;font-size: 40px;width:100%" >Learn to Donate Blood</h2>
+
+		</div>
+		<div class="col-xl-12">
+			<img src="images/donationFact.webp" style="width: 1140px;">
+
+		</div>
+		<div>
+			<p style="font-size: 30px;text-align: center;margin-left: 10px;">After donating blood, the body works to replenish the blood loss. </p>
+			<p style="font-size: 30px;text-align: center;margin-left: 10px;"> This stimulates the production of new blood cells and in turn, </p>
+			<p style="font-size: 30px;text-align: center;margin-left: 10px;"> helps in maintaining good health.</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+          
+		 <div class="col-xl-12">
+			<table class="table table-responsive table-bordered ">
+   <tbody>
+   <tr>
+   <th colspan="3" style="color:white;background-color:red;width: 1140px; text-align: center;font-size:30px">Compatible Blood Type Donors</th>
+   </tr>
+   <tr>
+   <td><b>Blood Type</b></td>
+   <td><b>Donate Blood To</b></td>
+   <td><b>Receive Blood From</b></td>
+   </tr>
+   <tr>
+   <td><span style="color: #961e1b;"><b>A+</b></span></td>
+   <td>A+ AB+</td>
+   <td>A+ A- O+ O-</td>
+   </tr>
+   <tr>
+   <td><span style="color: #961e1b;"><b>O+</b></span></td>
+   <td>O+ A+ B+ AB+</td>
+   <td>O+ O-</td>
+   </tr>
+   <tr>
+   <td><span style="color: #961e1b;"><b>B+</b></span></td>
+   <td>B+ AB+</td>
+   <td>B+ B- O+ O-</td>
+   </tr>
+   <tr>
+   <td><span style="color: #961e1b;"><b>AB+</b></span></td>
+   <td>AB+</td>
+   <td>Everyone</td>
+   </tr>
+   <tr>
+   <td><span style="color: #961e1b;"><b>A-</b></span></td>
+   <td>A+ A- AB+ AB-</td>
+   <td>A- O-</td>
+   </tr>
+   <tr>
+   <td><span style="color: #961e1b;"><b>O-</b></span></td>
+   <td>Everyone</td>
+   <td>O-</td>
+   </tr>
+   <tr>
+   <td><span style="color: #961e1b;"><b>B-</b></span></td>
+   <td>B+ B- AB+ AB-</td>
+   <td>B- O-</td>
+   </tr>
+   <tr>
+   <td><span style="color: #961e1b;"><b>AB-</b></span></td>
+   <td>AB+ AB-</td>
+   <td>AB- A- B- O-</td>
+   </tr>
+   </tbody>
+   </table>
+			</div>
+			
+   </div>
+
+	</div>
+</div>
+
+<div class="container">
+	<div  class="row">
+		<div class=col-xl-12>
+			<div class="col-xl-12  donationTypeInfoWindow text-center">
+				<header class="typeHeading" style="background: red;">
+					<h1 style="color: whitesmoke;"> Types of donation</h1>
+				</header>
+				<!-- /Header -->
+	
+				<!-- Content -->
+				<div class="content">
+					<p style="text-align: center;font-size: 20px;">The human body contains five liters of blood, which is made of several useful components i.e. <strong>Whole blood</strong>, <strong>Platelet</strong>, and <strong>Plasma</strong>.</p>
+					<p style="text-align: center;font-size: 20px;">Each type of component has several medical uses and can be used for different medical treatments. your blood donation determines the best donation for you to make.</p>
+					<p style="text-align: center;font-size: 20px;">For <strong>plasma</strong> and <strong>platelet</strong> donation you must have donated whole blood in past two years.</p>
+												
+				</div>
+				<br><br>
+				<!-- "Tabs" -->
+			
+			<div class="col-xl-12" >
+				<h3 style="text-align: center;background-color: red; color: whitesmoke;font-size: 40px;">Whole Blood</h3>
+			</div>
+			
+			<div class="row tabInfo" >
+			<div class="col-md-4 ">
+			
+				<h3>What is it?</h3>
+				
+				<p>
+				Blood Collected straight from the donor after its donation usually separated into red blood cells, platelets, and plasma.</p>
+				
+				<h3>Who can donate?</h3>
+				
+				<p>You need to be 18-65 years old, weigh 45kg or more and be fit and healthy.</p>
+			
+	
+			</div>
+			<div class="col-md-4 infoContent">
+			<h3>User For?</h3>
+				
+				<p>
+				 Stomach disease, kidney disease, childbirth, operations, blood loss, trauma, cancer, blood diseases, haemophilia, anemia, heart disease.</p>
+				
+				<h3>Lasts For?</h3>
+				
+				<p>Red cells can be stored for 42 days.</p>
+			
+			</div>
+			<div class="col-md-4 ">
+			<h3>How long does it take?</h3>
+				
+				<p>
+				15 minutes to donate.</p>
+				
+				<h3>How often can I donate?</h3>
+				
+				<p>Every 12 weeks</p>
+			
+			</div>
+			</div>
+
+			<div class="col-xl-12">
+				<h3 style="text-align: center;background-color: red; color: whitesmoke;font-size: 40px;">Platelets</h3>
+			</div>
+			
+			<div class="row tabInfo"  >
+			<div class="col-md-4 ">
+			
+				<h3>What is it?</h3>
+				
+				<p>
+				The straw-coloured liquid in which red blood cells, white blood cells, and platelets float in.Contains special nutrients which can be used to create 18 different type of medical products to treat many different medical conditions.</p>
+				
+				<h3>Who can donate?</h3>
+				
+				<p>You need to be 18-70 (men) or 20-70 (women) years old, weigh 50kg or more and must have given successful whole blood donation in last two years. </p>
+			
+	
+			</div>
+			<div class="col-md-4 infoContent">
+			<h3>User For?</h3>
+				
+				<p>
+				Immune system conditions, pregnancy (including anti-D injections), bleeding, shock, burns, muscle and nerve conditions, haemophilia, immunisations.</p>
+				
+				<h3>Lasts For?</h3>
+				
+				<p>Plasma can last up to one year when frozen.</p>
+			
+			</div>
+			<div class="col-md-4 ">
+			<h3>How  does it work?</h3>
+				
+				<p>
+				We collect your blood, keep plasma and return rest to you by apheresis donation.</p>
+			
+			<h3>How long does it take?</h3>
+				
+				<p>
+				15 minutes to donate.</p>
+				
+				<h3>How often can I donate?</h3>
+				
+				<p>Every 2-3 weeks.</p>
+			
+			</div>
+			</div>
+
+			<div class="col-xl-12">
+				<h3 style="text-align: center;background-color: red; color: whitesmoke; font-size: 40px;">Plasma</h3>
+			</div>
+			
+			<div class="row tabInfo" >
+			<div class="col-md-4 ">
+			
+				<h3>What is it?</h3>
+				
+				<p>
+				The tiny 'plates' in blood that wedge together to help to clot and reduce bleeding. Always in high demand, Vital for people with low platelet count, like malaria and cancer patients.</p>
+				
+				<h3>Who can donate?</h3>
+				
+				<p>You need to be 18-70 years old (men), weigh 50kg or more and have given a successful plasma donation in the past 12 months</p>
+			
+	
+			</div>
+			<div class="col-md-4 infoContent">
+			<h3>User For?</h3>
+				
+				<p>
+				Cancer, blood diseases, haemophilia, anaemia, heart disease, stomach disease, kidney disease, childbirth, operations, blood loss, trauma, burns.</p>
+				
+				<h3>Lasts For?</h3>
+				
+				<p>Just five days..</p>
+			
+			</div>
+			<div class="col-md-4 ">
+			<h3>How does it work?</h3>
+				
+				<p>
+				We collect your blood, keep platelet and return rest to you by apheresis donation.</p>
+				
+			<h3>How long does it take?</h3>
+				
+				<p>
+				45 minutes to donate.</p>
+				
+				<h3>How often can I donate?</h3>
+				
+				<p>Every 2 weeks</p>
+			
+			</div>
+			</div>
+			<br>
+	</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><p>Mumbai India</p></li>
+          <li><p>Ph-(+91)-9966-551-248</p></li>
+          <li><p>Email-bloodcamp24@gmail.com</p></li>
+      
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+        <li><a class="active" th:href="@{/}">Home</a></li>
+                    <li><a  th:href="@{/aboutus}">AboutUs</a></li>
+                    <li><a th:href="@{/userlogin}">Login</a></li>
+                    <li><a th:href= "@{/adminlogin}">Admin</a></li>
+                    <li><a  th:href= "@{/donateus}">Donate Us</a></li>
+        </ul>
+      </div>
+    
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+		
+        
+        <script src="homepage.js"></script>
+    </body>
+</html>

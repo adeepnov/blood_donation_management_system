@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Donor list</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+	 font-family: 'Poppins',sans-serif;
+	 background-color:#FFE4C4;
+	 margin: 10px;	 
+}
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container-fluid ">
+<h1 style="text-align: center;"><b>DONATIONS LIST</b></h1>
+<h1 style="text-align: right;"><a class="btn btn-primary" th:href="@{/}">HOME</a></h1>
+          <table id="donation" border="5" class="table table-stripped table-responsive-md">
+                 <thead>
+                     <tr>
+                         <th>ID</th>
+                         <th>FULL NAME</th>
+                         <th>LOCATION</th>
+                         <th>MOBILE NUMBER</th>
+                         <th>AMOUNT</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                      <tr th:each="donation: ${donation}">
+                         <td th:text="${donation.id}"></td>
+                          <td th:text="${donation.fullname}"></td>
+                          <td th:text="${donation.location}"></td>
+                          <td th:text="${donation.mobile}"></td>
+                          <td th:text="${donation.amount}"></td>
+                          
+<!--                            <td> -->
+<!--                           <a th:href="@{/delete}" class="button1">Delete</a> -->
+<!--                           </td> -->
+                          
+<!--                            <td> -->
+<!--                           <a th:href="@{/update}" class="button2">Update</a> -->
+<!--                           </td> -->
+<!--                            </tr> -->
+                 </tbody>
+               
+           </table>
+           
+          </div>                
+                  
+                          
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/userlogin.css}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+</head>
+
+<body>
+    <section>
+        <div class="form-container">
+            <h1>Login </h1>
+          <form action="#" th:action="@{/checkuserLogin}" th:object="${user}" >
+                <div class="control">
+                    <label for="name">Email Id:</label>
+                    <input type="text"  th:field="*{username}" placeholder="Enter Email Id" id="name" required>
+
+                </div>
+                <div class="control">
+                    <label for="psw">Password</label>
+                    <input type="password" th:field="*{password}" placeholder="Enter Password" name="psw" id="psw" required>
+
+
+                </div>
+                <div class="control">
+                    <input type="submit" value="Login">
+                </div>
+
+
+                <div class="link">
+                    <a th:href="@{/forgotpassword}">Forgot Password?</a>
+
+                </div>
+                
+                <div class="register">
+                    <a th:href="@{/register}">Register</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>

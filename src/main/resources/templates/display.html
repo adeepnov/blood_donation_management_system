@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Donation</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+	 font-family: 'Poppins',sans-serif;
+	
+	 margin: 10px;
+	 
+}
+
+
+
+</style>
+
+ <body>
+      <div id="content">
+        <div class="card text-center">
+        
+        <div class="card-body">
+          <h2 class="card-title">Donation is successful!</h2>
+          <p class="card-text"> Thanks for Donating Us !!! </p>
+          <a th:href="@{/donationlist}"  class="btn btn-primary">DonorsList</a>
+          <a th:href="@{/}"  class="btn btn-success">Home Page</a>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </body>
+</html>

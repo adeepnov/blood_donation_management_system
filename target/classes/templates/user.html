@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>User List</title>
+    <link rel="stylesheet" th:href="@{/css/user.css}">
+</head>
+<body>
+    <h1 style="text-align: center;"><b>USERS LIST</b></h1>
+    
+    <h1 style="text-align: right;">
+			<a class="btn btn1" th:href="@{/}">Home</a>
+	</h1>
+    
+    <div class="tbl-header">    
+        <table id="users" border="0" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>USERNAME</th>
+                    <th>AGE</th>
+                    <th>BLOOD GROUP</th>
+                    <th>EMAIL</th>
+                    <th>LOCATION</th>
+                    <th>GENDER</th>
+                    <th>STATUS</th>
+                    <th>DELETE ACTION</th>
+                    <th>UPDATE ACTION</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr th:each="user : ${users}">
+                    <!--                           <td th:text="${user.id}"></td> -->
+                    <td th:text="${user.username}"></td>
+                    <td th:text="${user.age}"></td>
+                    <td th:text="${user.blood_group}"></td>
+                    <td th:text="${user.email}"></td>
+                    <td th:text="${user.location}"></td>
+                    <td th:text="${user.gender}"></td>
+                    <td th:text="${user.available}"></td>
+
+                    <td><a th:href="@{/deleteuser/{email}(email=${user.email})}" class="button button1">Delete</a></td>
+
+                    <td><a th:href="@{/updateuser/{email}(email=${user.email})}" class="button button1">Update</a></td>
+
+                    <!--                           <form action="/delete"> -->
+                    <!--                           <input type="submit" value="Delete-User" class="button1"> -->
+                    <!--                           </form> -->
+                    <!--                           </td> -->
+
+                    <!--                           <td> -->
+                    <!--                           <form action="/update"> -->
+                    <!--                           <input type="submit" value="Update-User" class="button2"> -->
+                    <!--                           </form> -->
+                    <!--                           </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+</body>
+
+</html>
